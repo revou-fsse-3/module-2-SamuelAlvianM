@@ -50,17 +50,94 @@ body {
 /* Style the header and navigation */
 header {
     position: absolute;
-    width: 1000px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     z-index: 10;
     align-items: center;
 }
 
+.LDM {
+    z-index: 100;
+    background-color: #A6CF98;
+    width: 7em;
+    height: 3em;
+    border-radius: 10em;
+    box-shadow: inset 0 8px 60px rgba(0,0,0, 0.3),
+                inset 0 8px 8px rgba(0,0,0, 0.3),
+                inset 0 -4px 4px rgba(0,0,0, 0.3);
+    position: fixed;
+    display: flex;
+    left: 7.5%;
+    top: 0.2%;
+    align-items: center;
+    cursor: pointer;
+            
+}
+
+.LDM_indicator {
+    background-color: #F5E8C7;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 8 40px rgba(170, 170, 170, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.LDM_icon-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LDM_icon { 
+    color: #706f6f;
+    font-size: 1.5rem;
+
+}
+
+/* animasi */
+.LDM_icon.animated {
+    animation: spin 0.5s;
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* darkmode */
+body.darkmode {
+    background-color: black;
+}
+
+.darkmode .LDM {
+    box-shadow: inset 0 8px 60px rgba(0,0,0, 0.3),
+    inset  8px 0  8px rgba(0,0,0, 0.3),
+    inset 0 -4px 4px rgba(0,0,0, 0.3);
+}
+
+.darkmode .LDM_indicator {
+    transform: translateX(4.5em);
+    background-color: #363062;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+}
+
+.darkmode .LDM_icon{
+    color: #0dffdf;
+}
+
+
+
 .logo {
     position: fixed;
     color: #fa7d17;
-    font-size: 1.5em;
+    font-size: 2em;
+    left: 0;
     margin: 10px 10px;
     font-weight: 700;
     text-shadow: 1px 1px 5px black;
@@ -74,13 +151,11 @@ nav ul {
     display: flex;
     left: 50px;
     flex-direction: row;
-    justify-content: space-evenly;
     flex-shrink: 3;
     align-items: center;
 }
 
 nav ul li {
-    position: relative;
     list-style: none;
     font-size: 0.8em;
     font-weight: 600;
@@ -116,8 +191,9 @@ nav ul li:hover, a:hover {
     padding: 1em;
     transition: 0.1s;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: flex-end;
+    justify-content: center;
+    gap: 50px;
     background: linear-gradient(to bottom right, #00b9a0d2 25%, #01dd43b9 60%);
 }
 
@@ -417,17 +493,128 @@ nav ul li:hover, a:hover {
     grid-row-end: 9;
 }
 
-.card-container{
+section#Preview {
+    height: 70vh;
     display: grid;
-    grid-template-columns: repeat(12, 1fr );
-    grid-template-rows: repeat(1, 1fr );
+    margin: 0;
+    grid-template-rows: 400px 200px;
+    grid-template-columns: 1fr 50px 50px 50px 50px 50px 2fr;
+    align-items: center;
+    justify-items: center;
+    background: linear-gradient(to top left, #070707 40%, rgba(27, 114, 0, 0.906) 70%);
 }
 
-.card {
-    width: 400px;
-    height: 600px;
-    margin: 10px; 
+input[type="radio"] {
+    position: relative;
+    transform: scale(1.5);
+    cursor: pointer;
+    margin: 15px;
+    appearance: none; 
+    -webkit-appearance: none; 
+    border: 2px solid #ffffff; 
+    border-radius: 50%; 
+    width: 20px; 
+    height: 20px; 
+    padding: 10px;
+    background-color: #001679;
+    outline: none;
+    transition: background-color 0.3s;
 }
+
+input[type="radio"]:checked {
+    background-color: #001679;
+}
+
+input[type="radio"]:hover {
+    background-color: #66cc99; 
+}
+
+
+main#card-container{
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    width: 80vw;
+    height: 800px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    --items: 5;
+    --middle: 3;
+    --position: 1;
+}
+
+label.card {
+    position: absolute;
+    width: 500px;
+    height: 700px;
+    transition: all 0.5s linear;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transform: rotateY(calc(-5deg* var(--r))) translateX(calc(-400px * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
+    cursor: pointer;
+}
+
+label.card:nth-of-type(1) {
+    --offset: 1;
+}
+label.card:nth-of-type(2) {
+    --offset: 2;
+}
+label.card:nth-of-type(3) {
+    --offset: 3;
+}
+label.card:nth-of-type(4) {
+    --offset: 4;
+}
+label.card:nth-of-type(5) {
+    --offset: 5;
+}
+
+input:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(1):checked ~ main#card-container {
+    --position: 1;
+}
+
+input:nth-of-type(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(2):checked ~ main#card-container {
+    --position: 2;
+}
+
+input:nth-of-type(3) {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(3):checked ~ main#card-container {
+    --position: 3;
+}
+
+input:nth-of-type(4) {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(4):checked ~ main#card-container {
+    --position: 4;
+}
+
+input:nth-of-type(5) {
+    grid-column: 6 / 7;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(5):checked ~ main#card-container {
+    --position: 5;
+}
+
 
 .card__inner {
     width: 100%;
@@ -450,11 +637,11 @@ nav ul li:hover, a:hover {
     backface-visibility: hidden;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 1px 4px 15px 3px rgba(0, 0, 0, 0.9);
+    box-shadow: 2px 2px 10px 6px rgba(154, 174, 182, 0.9);
 }
 
 .card__face--front {
-    background: linear-gradient(to bottom right, #008170 25%, #00972d 60%);
+    background: linear-gradient(to bottom right, #005B41 30%, #04364A 60%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -468,7 +655,7 @@ nav ul li:hover, a:hover {
 
 .card__face--front h2 {
     color: #ffae00;
-    font-size: 32px;
+    font-size: 35px;
     
 }
 
@@ -509,6 +696,54 @@ nav ul li:hover, a:hover {
 }
 /* Kartu 2 */
 #card2 .card__header:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 0 0 50% 0;
+    background-image: url(assets/SEC-1-CON.jpeg); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* card 3 */
+#card3 .card__header:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 0 0 50% 0;
+    background-image: url(assets/SEC-1-CON.jpeg); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* card 4 */
+#card4 .card__header:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 0 0 50% 0;
+    background-image: url(assets/SEC-1-CON.jpeg); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* card 5 */
+#card5 .card__header:after {
     content: '';
     display: block;
     position: absolute;
@@ -806,7 +1041,37 @@ footer {
 }
 
 /* CSS untuk layar yang lebih kecil (misalnya, lebar kurang dari 1150px) */
+@media screen and (max-width: 1400px) {
+    .LDM {
+        width: 5.5em;
+        height: 3em;
+        left: 7.5%;
+    }
+    .darkmode .LDM_indicator {
+        transform: translateX(3em);
+    }
+
+}
 @media screen and (max-width: 1150px) {
+
+    .LDM {
+        width: 5em;
+        height: 2.5em;
+        left: 7.5%;
+        top: 0.2%;
+    }
+    .LDM_indicator {
+        width: 2em;
+        height: 2em;
+    }
+
+    .darkmode .LDM_indicator {
+        transform: translateX(3em);
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
 
     nav ul li a {
         font-size: 1em;
@@ -892,6 +1157,21 @@ form textarea {
 
   /* CSS untuk layar yang lebih kecil (misalnya, lebar kurang dari 900px) */
 @media screen and (max-width: 900px) {
+
+    .LDM {
+        width: 5.5em;
+        height: 2.5em;
+        left: 7.5%;
+        top: 0.2%;
+    }
+    .LDM_indicator {
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    .darkmode .LDM_indicator {
+        transform: translateX(3.2em);
+    }
 
     header {
         font-size: 18px;

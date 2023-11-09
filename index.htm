@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Ubuntu&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/a076d5399.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Future Society</title>
     <link rel="stylesheet" href="style.css">
@@ -18,6 +19,13 @@
 
     <!-- Header Start-->
     <header>
+        <div class="LDM">
+            <div class="LDM_indicator">
+                <div class="LDM_icon-container">
+                    <i class="LDM_icon fa-regular"></i>
+                </div>
+            </div>
+        </div>
         <nav class="navbar">
             <input type="checkbox" id="check">
             <label class="checkbtn" for="check">
@@ -164,52 +172,119 @@
 
     <!-- SECTION 3 - add card for knowing our founder -->
     <section id="Preview">
-        <div class="card-container">
-            <div class="card" id="card1">
+
+    <div class="card-slider">
+            <input id="c-1" type="radio" name="position" checked />
+            <input id="c-2" type="radio" name="position" />
+            <input id="c-3" type="radio" name="position" />
+            <input id="c-4" type="radio" name="position" />
+            <input id="c-5" type="radio" name="position" />
+    <main id="card-container" >
+            <label class="card" id="card1" for="c-1">
+            <div class="card__inner">
+                <div class="card__face card__face--front">
+                    <h2 class="glow-on-hover">Dr. Ivan Spasojevic, Ph.D</h2>
+                </div>
+                <div class="card__face card__face--back">
+                    <div class="card__content">
+                        <div class="card__header">
+                            <img src="./assets/bgcard-1ivan.jpeg" alt="LQ3" class="pp" width="250" />
+                        </div>
+                        <div class="card__body">
+                            <h3>Dr. Ivan Spasojevic, Ph.D</h3>
+                            <p>He made trees from liquid and it can absorb more CO<sub>2</sub> than normal tree.
+                                Also it produce Oxygen and Energy for the Environment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </label>
+            <!-- card 2 -->
+            <label class="card" id="card2" for="c-2">
                 <div class="card__inner">
                     <div class="card__face card__face--front">
-                        <h2 class="glow-on-hover">Dr. Ivan Spasojevic, Ph.D</h2>
+                        <h2 class="glow-on-hover">"Engineer"</h2>
                     </div>
                     <div class="card__face card__face--back">
                         <div class="card__content">
                             <div class="card__header">
-                                <img src="./assets/bgcard-1ivan.jpeg" alt="LQ3" class="pp" width="250" />
+                                <img src="./assets/card-3-engineer.jpeg" alt="LQ3" class="pp" width="250" />
                             </div>
                             <div class="card__body">
-                                <h3>Dr. Ivan Spasojevic, Ph.D</h3>
-                                <p>He made trees from liquid and it can absorb more CO<sub>2</sub> than normal tree.
-                                    Also it produce Oxygen and Energy for the Environment</p>
+                                <h3>ENGINEER</h3>
+                                <p>Developed hardware that can analyze the QUALITY of Air at every spot in city
+                                    using vehcle or it can be placed at many spot in the city to analyze it.
+                                He began the journey from Uganda and Got appreciation from Google teams.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-                <!-- card 2 -->
-                <div class="card" id="card2">
-                    <div class="card__inner">
-                        <div class="card__face card__face--front">
-                            <h2 class="glow-on-hover">"Engineer"</h2>
-                        </div>
-                        <div class="card__face card__face--back">
-                            <div class="card__content">
-                                <div class="card__header">
-                                    <img src="./assets/card-3-engineer.jpeg" alt="LQ3" class="pp" width="250" />
-                                </div>
-                                <div class="card__body">
-                                    <h3>ENGINEER</h3>
-                                    <p>Developed hardware that can analyze the QUALITY of Air at every spot in city
-                                        using vehicle or it can be placed at many spot in the city to analyze it.
-                                    He began the journey from Uganda and Got appreciation from Google teams.</p>
-                                </div>
+            </label>
+            <label class="card" id="card3" for="c-3">
+                <div class="card__inner">
+                    <div class="card__face card__face--front">
+                        <h2 class="glow-on-hover">"CARD-3"</h2>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card__content">
+                            <div class="card__header">
+                                <img src="./assets/card-3-engineer.jpeg" alt="LQ3" class="pp" width="250" />
+                            </div>
+                            <div class="card__body">
+                                <h3>CARD-3</h3>
+                                <p>Developed hardware that can analyze the QUALITY of Air at every spot in city
+                                    using vehicle or it can be placed at many spot in the city to analyze it.
+                                He began the journey from Uganda and Got appreciation from Google teams.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        </div>
-    </section>
+            </label>
+            <label class="card" id="card4" for="c-4">
+                <div class="card__inner">
+                    <div class="card__face card__face--front">
+                        <h2 class="glow-on-hover">"CARD-4"</h2>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card__content">
+                            <div class="card__header">
+                                <img src="./assets/card-3-engineer.jpeg" alt="LQ3" class="pp" width="250" />
+                            </div>
+                            <div class="card__body">
+                                <h3>CARD-4</h3>
+                                <p>Developed hardware that can analyze the QUALITY of Air at every spot in city
+                                    using vehicle or it can be placed at many spot in the city to analyze it.
+                                He began the journey from Uganda and Got appreciation from Google teams.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </label>
+            <label class="card" id="card5" for="c-5">
+                <div class="card__inner">
+                    <div class="card__face card__face--front">
+                        <h2 class="glow-on-hover">"CARD-5"</h2>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card__content">
+                            <div class="card__header">
+                                <img src="./assets/card-3-engineer.jpeg" alt="LQ3" class="pp" width="250" />
+                            </div>
+                            <div class="card__body">
+                                <h3>CARD-5</h3>
+                                <p>Developed hardware that can analyze the QUALITY of Air at every spot in city
+                                    using vehicle or it can be placed at many spot in the city to analyze it.
+                                He began the journey from Uganda and Got appreciation from Google teams.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </label>
+            <button id="prev-btn">Previous</button>
+            <button id="next-btn">Next</button>
     </main>
+    </div>
+    </section>
     <!-- section 3 END -->
 
     <!-- SECTION 4 - REGISTER, CONTACT INFO, SERVICE, Q&A -->

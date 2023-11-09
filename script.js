@@ -45,6 +45,24 @@ card2.addEventListener("click", function() {
     card2.classList.toggle("is-flipped");
 });
 
+const card3 = document.querySelector("#card3 .card__inner");
+
+card3.addEventListener("click", function() {
+    card3.classList.toggle("is-flipped");
+});
+
+const card4 = document.querySelector("#card4 .card__inner");
+
+card4.addEventListener("click", function() {
+    card4.classList.toggle("is-flipped");
+});
+
+const card5 = document.querySelector("#card5 .card__inner");
+
+card5.addEventListener("click", function() {
+    card5.classList.toggle("is-flipped");
+});
+
 // FORM ANIMATION
 document.addEventListener("DOMContentLoaded", function() {
     const openFormButton = document.getElementById("openForm");
@@ -77,3 +95,50 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 2000);
     });
 });
+
+//LIGHT DAN DARK MODE
+
+const header = document.querySelector('header');
+const LDM = document.querySelector('.LDM');
+const icon = document.querySelector('.LDM_icon');
+
+// kondisi dark light mode
+function store(value) {
+    localStorage.setItem('darkmode', value);
+}
+
+function load(){
+    const darkMode = localStorage.getItem('darkmode');
+
+    if(!darkMode) {
+        store(false);
+        icon.classList.add('fa-sun');
+    } else if( darkMode == 'true'){
+    header.classList.add('darkmode');
+    icon.classList.add('fa-moon');
+    } else if(darkMode == 'false'){
+        icon.classList.add('fa-sun');
+    }
+}
+
+load();
+
+LDM.addEventListener('click', () => {
+
+    header.classList.toggle('darkmode');
+    icon.classList.add('animated');
+
+    if(header.classList.contains('darkmode')) {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        store(true);
+    }else{
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        store(false);
+    }
+
+    setTimeout(() => {
+        icon.classList.remove('animated');
+    }, 500);
+})
