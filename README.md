@@ -4,12 +4,8 @@
 > My First Project with RevoU: https://chipper-figolla-8059a4.netlify.app/
 
 ## My Bio :clipboard:
-![My Bio](assets/FOTO-3-1.png)
+![My Bio](assets/FOTO-3-1.png){width:500px;height:500px;}
 > SAM for Samuel Alvian Mahardika
-
-I'm 24 Year old and have one  brother. Live in Bandung and currently work for myself with my family making snacks and foods for catering, cake store, and traditional cake markets for now.
-
-I was Chemical Engineering Student college at Parahyangan Chatolic University (2017 - 2021). But I was not Finished my Study when Corona happened. 
 
 **NOW..** I'm Here to make a new study, new job, and new journey in Software engineering. With zero knowledge but I have a purpose to move foward. So Let's have fun Together and **_よろしく お願いします_**.
 
@@ -21,6 +17,103 @@ I was Chemical Engineering Student college at Parahyangan Chatolic University (2
 | :link: Linkedin    |[Samuel Alvian](https://www.linkedin.com/in/samuel-alvian-m/)|
 | :email: Email        |oensam07@gmail.com                                       |
 
+## Sam's Journal
+I try to put some things I've learned about Software Engineering.
+
+### Netlify Sign up and Synchronize with GitHub
+
+#### Step 1: Sign Up for Netlify
+1. Make sure you have a Github Account.
+2. Go to the Netlify website: [https://www.netlify.com/](https://www.netlify.com/).
+3. Click the "Sign Up" button and follow the registration process. Or sign with GitHub
+4. Verify your email address to activate your Netlify account.
+5. if you sign with github, you need to authenticate your account.
+
+![STEP 1-SIGN](assets/EXP/1STEP1.1.jpg){width:500px;height:500px;}
+
+#### Step 2: Connect Netlify to GitHub
+1. Log in to your Netlify account.
+2. Click "New site from Git" on the Netlify dashboard.
+3. Choose your Git provider, which is GitHub in this case.
+4. Authorize Netlify to access your GitHub repositories.
+5. Select the GitHub repository you want to deploy.
+
+![STEP 1-CONNECT](assets/EXP/1STEP1.2.jpg){width:500px;height:500px;}
+
+### The _Auto_ Deploy on Netlify from GitHub
+
+#### Step 1: Configure Build Settings
+1. After selecting your repository, you'll be prompted to configure build settings.
+2. Choose your build settings, including the branch you want to deploy from.
+3. Click "Deploy site" to initiate the first deployment.
+
+![STEP 2](assets/EXP/1step%202.jpg){width:500px;height:500px;}
+
+
+#### Step 2: Automatic Updates from GitHub
+1. Netlify will automatically build and deploy your site when you push updates to the specified branch on GitHub.
+2. Any changes made in the selected branch will trigger an automatic update on Netlify.
+
+![STEP 2.2](assets/EXP/2STEP%201.jpg){width:500px;height:500px;}
+
+### Make DNS to Custom Domain
+
+#### Step 1: Buy a Domain from Your Domain Provider (e.g., Niagahoster)
+1. Purchase a domain from your preferred domain provider, such as Niagahoster.
+2. Note down the DNS settings provided by your domain provider.
+
+![STEP 3](assets/EXP/3%20STEP%201.jpg){width:500px;height:500px;}
+
+#### Step 2: Configure Custom Domain on Netlify
+1. In your Netlify dashboard, select your site.
+2. Under "Settings," go to the "Domain management" section.
+3. Click "Add custom domain" and enter your purchased domain name.
+4. Follow the instructions to verify and set up DNS records for your domain.
+5. Netlify will configure your site to use the custom domain.
+
+![STEP 3.2](assets/EXP/3%20STEP%201%20(2).jpg){width:500px;height:500px;}
+
+### Manage Domain on Netlify
+
+#### Step 1: Go to "site" and choose Domain Management
+1. In your netlify Dashboard, select Site.
+2. Choose Domain Management to set up your custom domain.
+3. Click "add a domain" and enter your domain name.
+4. Your Domain name must be match with the custom name you've made on your domain provider.
+
+![STEP 4](assets/EXP/4s1.jpg){width:500px;height:500px;}
+
+#### Step 2: Check your Production Domains
+1. After your custom domain registered on domain management, you must wait the synchronization and configuration between your Netlify DNS and domain provider site. 
+2. It will take hours (max 24h) for the "awautubg External DNS turned into "Netlify DNS".
+3. If it does, your custom domain or your website is online now.
+
+![STEP 4.2](assets/EXP/4s1.2.jpg){width:500px;height:500px;}
+
+### How to Use Git for Version Control
+
+#### Basic Git Commands
+
+```shell
+### Initialize a Git Repository
+git init
+
+### Clone a Repository
+git clone <repository_url>
+
+### Add Files to Staging Area
+git add <file_name>  or
+git add . 
+
+### Commit Changes
+git commit -m "Your commit message"
+
+### Push Changes to Remote Repository
+git push
+
+### Pull Latest Changes from Remote Repository
+git pull
+```
 
 ## My Little Experience :stars:
 #### 1. Leader of Community Service for Green Chemical Project

@@ -494,13 +494,13 @@ nav ul li:hover, a:hover {
 }
 
 section#Preview {
-    height: 70vh;
+    height: 100vh;
     display: grid;
-    margin: 0;
-    grid-template-rows: 400px 200px;
-    grid-template-columns: 1fr 50px 50px 50px 50px 50px 2fr;
+    grid-template-rows: 100px 700px;
+    grid-template-columns: 1fr 100px 100px 100px 100px 100px 1fr;
     align-items: center;
     justify-items: center;
+    position: relative;
     background: linear-gradient(to top left, #070707 40%, rgba(27, 114, 0, 0.906) 70%);
 }
 
@@ -509,6 +509,7 @@ input[type="radio"] {
     transform: scale(1.5);
     cursor: pointer;
     margin: 15px;
+    left: 175%;
     appearance: none; 
     -webkit-appearance: none; 
     border: 2px solid #ffffff; 
@@ -541,7 +542,7 @@ main#card-container{
     justify-content: center;
     overflow: hidden;
     transform-style: preserve-3d;
-    perspective: 600px;
+    perspective: 1000px;
     --items: 5;
     --middle: 3;
     --position: 1;
@@ -549,12 +550,12 @@ main#card-container{
 
 label.card {
     position: absolute;
-    width: 500px;
-    height: 700px;
+    width: 400px;
+    height: 600px;
     transition: all 0.5s linear;
     --r: calc(var(--position) - var(--offset));
     --abs: max(calc(var(--r) * -1), var(--r));
-    transform: rotateY(calc(-5deg* var(--r))) translateX(calc(-400px * var(--r)));
+    transform: rotateY(calc(-5deg* var(--r))) translateX(calc(-100px * var(--r)));
     z-index: calc((var(--position) - var(--abs)));
     cursor: pointer;
 }
@@ -656,7 +657,7 @@ input:nth-of-type(5):checked ~ main#card-container {
 .card__face--front h2 {
     color: #ffae00;
     font-size: 35px;
-    
+    text-align: center;
 }
 
 .glow-on-hover  {
@@ -1040,6 +1041,14 @@ footer {
     margin-right: 10px;
 }
 
+/* @media screen and (max-width: 1700px) {
+section#Preview {
+    height: 110vh;
+}
+#Carousel .gallery {
+    height: 80vh;
+}
+} */
 /* CSS untuk layar yang lebih kecil (misalnya, lebar kurang dari 1150px) */
 @media screen and (max-width: 1400px) {
     .LDM {
@@ -1114,6 +1123,22 @@ footer {
         width: 10px;
         height: 10px;
         margin: 8px;
+    }
+
+    section#Preview {
+        height: 100vh;
+        grid-template-columns: 1fr 15px 15px 15px 15px 15px 1fr;
+}
+    
+    input[type="radio"] {
+        padding: 7px;
+        left: 125%;
+    }
+    
+    label.card {
+        position: absolute;
+        width: 400px;
+        height: 600px;
     }
 
     .captions {
