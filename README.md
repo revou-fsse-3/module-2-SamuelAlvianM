@@ -4,7 +4,7 @@
 > My First Project with RevoU: https://chipper-figolla-8059a4.netlify.app/
 
 ## My Bio :clipboard:
-![My Bio](assets/FOTO-3-1.png){width=500px height=500px}
+![My Bio](assets/FOTO-3-1.png)
 > SAM for Samuel Alvian Mahardika
 
 **NOW..** I'm Here to make a new study, new job, and new journey in Software engineering. With zero knowledge but I have a purpose to move foward. So Let's have fun Together and **_よろしく お願いします_**.
@@ -29,7 +29,7 @@ I try to put some things I've learned about Software Engineering.
 4. Verify your email address to activate your Netlify account.
 5. if you sign with github, you need to authenticate your account.
 
-![STEP 1-SIGN](assets/EXP/1STEP1.1.jpg){width=800px height=800px}
+![STEP 1-SIGN](assets/EXP/1STEP1.1.jpg)
 
 #### Step 2: Connect Netlify to GitHub
 1. Log in to your Netlify account.
@@ -38,7 +38,7 @@ I try to put some things I've learned about Software Engineering.
 4. Authorize Netlify to access your GitHub repositories.
 5. Select the GitHub repository you want to deploy.
 
-![STEP 1-CONNECT](assets/EXP/1STEP1.2.jpg){width=800px height=800px}
+![STEP 1-CONNECT](assets/EXP/1STEP1.2.jpg)
 
 ### The _Auto_ Deploy on Netlify from GitHub
 
@@ -47,14 +47,14 @@ I try to put some things I've learned about Software Engineering.
 2. Choose your build settings, including the branch you want to deploy from.
 3. Click "Deploy site" to initiate the first deployment.
 
-![STEP 2](assets/EXP/1step%202.jpg){width=800px height=800px}
+![STEP 2](assets/EXP/1step%202.jpg)
 
 
 #### Step 2: Automatic Updates from GitHub
 1. Netlify will automatically build and deploy your site when you push updates to the specified branch on GitHub.
 2. Any changes made in the selected branch will trigger an automatic update on Netlify.
 
-![STEP 2.2](assets/EXP/2STEP%201.jpg){width=800px height=800px}
+![STEP 2.2](assets/EXP/2STEP%201.jpg)
 
 ### Make DNS to Custom Domain
 
@@ -62,7 +62,7 @@ I try to put some things I've learned about Software Engineering.
 1. Purchase a domain from your preferred domain provider, such as Niagahoster.
 2. Note down the DNS settings provided by your domain provider.
 
-![STEP 3](assets/EXP/3%20STEP%201.jpg){width=800px height=800px}
+![STEP 3](assets/EXP/3%20STEP%201.jpg)
 
 #### Step 2: Configure Custom Domain on Netlify
 1. In your Netlify dashboard, select your site.
@@ -71,7 +71,7 @@ I try to put some things I've learned about Software Engineering.
 4. Follow the instructions to verify and set up DNS records for your domain.
 5. Netlify will configure your site to use the custom domain.
 
-![STEP 3.2](assets/EXP/3%20STEP%201%20(2).jpg){width=800px height=800px}
+![STEP 3.2](assets/EXP/3%20STEP%201%20(2).jpg)
 
 ### Manage Domain on Netlify
 
@@ -81,14 +81,14 @@ I try to put some things I've learned about Software Engineering.
 3. Click "add a domain" and enter your domain name.
 4. Your Domain name must be match with the custom name you've made on your domain provider.
 
-![STEP 4](assets/EXP/4s1.jpg){width=800px height=800px}
+![STEP 4](assets/EXP/4s1.jpg)
 
 #### Step 2: Check your Production Domains
 1. After your custom domain registered on domain management, you must wait the synchronization and configuration between your Netlify DNS and domain provider site. 
 2. It will take hours (max 24h) for the "awautubg External DNS turned into "Netlify DNS".
 3. If it does, your custom domain or your website is online now.
 
-![STEP 4.2](assets/EXP/4s1.2.jpg){width=800px height=800px}
+![STEP 4.2](assets/EXP/4s1.2.jpg)
 
 ### How to Use Git for Version Control
 
