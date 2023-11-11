@@ -124,7 +124,6 @@ function load(){
 load();
 
 LDM.addEventListener('click', () => {
-
     header.classList.toggle('darkmode');
     icon.classList.add('animated');
 
